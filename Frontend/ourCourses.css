@@ -55,6 +55,78 @@
 
 */
 
+
+/*
+*css code
+*.card-heading-section h1 {
+    font-weight: 500;
+}
+
+.card-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.card-text {
+    font-weight: 300;
+    color: #5f5d5d;
+}
+
+.view-more-btn a {
+    transition: 0.3s all ease;
+}
+
+.view-more-btn a:hover {
+    transform: translateX(0.5rem);
+    text-decoration: underline;
+}
+
+.card-container .card {
+    border-radius: 12px;
+    transition: 0.5s all ease;
+}
+
+.card:hover {
+    transform: translateY(-0.5rem);
+    cursor: pointer;
+}
+
+/* Responsive Tweaks 
+@media (max-width: 768px) {
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+
+    .card-btn button {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+
+    .view-more-btn a {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-title {
+        font-size: 1rem;
+    }
+
+    .card-text {
+        font-size: 0.8rem;
+    }
+
+    .view-more-btn a {
+        font-size: 0.8rem;
+    }
+}
+
+*/
+
 * {
     margin: 0;
     padding: 0;
