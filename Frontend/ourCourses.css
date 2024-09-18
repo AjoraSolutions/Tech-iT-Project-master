@@ -1,3 +1,59 @@
+/* Bootstrap code
+<div class="container mt-5">
+    <div class="card-heading-section text-left">
+        <h1 class="border-bottom pb-2">Our Courses</h1>
+    </div>
+
+    <div class="row card-container justify-content-center mt-5">
+        <!-- card-1 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card h-100 shadow">
+                <img src="./assets/software-developer-6521720_1280.jpg" class="card-img-top rounded-top" alt="">
+                <div class="card-body">
+                    <h2 class="card-title text-primary">Full Stack Development</h2>
+                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut officia rerum voluptatum dolores.</p>
+                    <div class="text-right">
+                        <button type="button" class="btn btn-primary">Explore</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- card-2 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card h-100 shadow">
+                <img src="./assets/technology-6701404_1280.jpg" class="card-img-top rounded-top" alt="">
+                <div class="card-body">
+                    <h2 class="card-title text-primary">Data Analytics</h2>
+                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut officia rerum voluptatum dolores.</p>
+                    <div class="text-right">
+                        <button type="button" class="btn btn-primary">Explore</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- card-3 -->
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card h-100 shadow">
+                <img src="./assets/email-marketing-7579810_1280.png" class="card-img-top rounded-top" alt="">
+                <div class="card-body">
+                    <h2 class="card-title text-primary">Digital Marketing</h2>
+                    <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut officia rerum voluptatum dolores.</p>
+                    <div class="text-right">
+                        <button type="button" class="btn btn-primary">Explore</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="view-more-btn text-center">
+        <a href="#" class="btn btn-outline-primary">View More</a>
+    </div>
+</div>
+
+*/
 
 * {
     margin: 0;
