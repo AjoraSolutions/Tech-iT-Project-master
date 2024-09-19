@@ -66,6 +66,7 @@ html {
     }
 }
 
+
 @media (max-width: 576px) {
     .card-title {
         font-size: 1rem;
