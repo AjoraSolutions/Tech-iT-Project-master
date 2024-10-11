@@ -1,23 +1,24 @@
 
+
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
 * {
-    font-family: "Nunito Sans", sans-serif;
-    font-optical-sizing: auto;
+    font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-style: normal;
-    font-variation-settings: "wdth" 100, "YTLC" 500;
     box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
+
 :root {
     --primaryColor: #0076de;
     --whiteColor: #fff;
     --blackcolor: #333;
     --grayColor: #f6f8fa;
     --labelColor: #64b1f5;
-    --yellowColor: #ffd723;
+    --yellowColor: #e4c644;
 }
 
 body {
@@ -31,15 +32,16 @@ body {
     display: flex;
     justify-content: space-between;
     position: fixed;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     z-index: 10;
     color: var(--whiteColor);
     padding: 1rem 2.5rem;
-    background: rgb(36, 56, 235);
+    box-shadow: -1px 21px 19px -1px rgba(0, 0, 0, 0.32);
+    background: linear-gradient(75deg, rgba(9, 32, 231, 1) 33%, rgba(23, 38, 168, 0.742734593837535) 100%);
 }
 
-.navbar-logo>a{
+.navbar-logo > a {
     letter-spacing: 2.5;
     text-decoration: none;
     color: var(--whiteColor);
@@ -52,16 +54,16 @@ body {
     align-items: center;
 }
 
-.nav-menu > a{
+.nav-menu > a {
     text-decoration: none;
     color: var(--whiteColor);
 }
 
-.menu-toggle{
+.menu-toggle {
     display: none;
 }
 
-.menu-toggle .bar{
+.menu-toggle .bar {
     width: 100%;
     height: 2px;
     margin: 3px auto;
@@ -70,11 +72,10 @@ body {
     cursor: pointer;
 }
 
-
 header {
     width: 100%;
     height: 80vh;
-    background-image: url("./assets/cute-freelance-girl-using-laptop-sitting-floor-smiling.jpg");
+    background-image: url("./assets/ai-generated-8762055_1280.png");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -85,26 +86,42 @@ header {
     position: absolute;
     top: 7rem;
     left: 3rem;
-    letter-spacing: 3;
-    font-weight: bolder;
-    font-size: 4.7rem;
-    color: var(--whiteColor);
-    text-shadow: 4px 2px 0px rgba(0, 0, 0.2);
+    letter-spacing: 3; 
+    font-size: 4rem;
+    color: #64b1f5;
+    text-shadow: 4px 2px 0px rgba(0, 0, 0, 0.2);
+    
+   
+
 }
 
-.header-title span{
-    color: var(--primaryColor);
+.header-title h2{
+    
+    color: #1355cf;
+    line-height: 1.2;
+    font-size: 6.2rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: oblique;
 }
 
-.search-wrapper{
+.header-title h2>span{
+    color: var(--grayColor);
+    
+}
+
+
+
+.search-wrapper {
     width: 60%;
     margin: auto;
     min-width: 300px;
     height: 3.5rem;
     position: relative;
+    
 }
 
-.search-box{
+.search-box {
     width: 100%;
     position: absolute;
     background-color: var(--grayColor);
@@ -112,9 +129,10 @@ header {
     top: -45%;
     height: 100%;
     width: 100%;
+    border-radius: 12px;
 }
 
-.search-card{
+.search-card {
     display: flex;
     justify-content: space-between;
     height: 100%;
@@ -122,14 +140,15 @@ header {
     gap: .2rem;
 }
 
-.search-input{
+.search-input {
     height: 100%;
     width: 100%;
     border: none;
     padding: 0.5rem;
+
 }
 
-.serach-button{
+.serach-button {
     width: 200px;
     background: var(--primaryColor);
     border: none;
@@ -138,18 +157,20 @@ header {
     border-radius: 6px;
 }
 
-.filter-box{
+.filter-box {
     width: 100%;
     height: auto;
     font-size: 0.8rem;
     width: 60%;
     min-width: 300px;
     margin: auto;
-    
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.filter-dropdown{
-    width: 100%;
+.filter-dropdown {
+    /* width: 100%; */
     border-bottom: 1px solid var(--labelColor);
     display: flex;
     justify-content: flex-start;
@@ -157,16 +178,16 @@ header {
     gap: 0.3rem;
 }
 
-.filter-select{
+.filter-select {
     border: none;
     padding: 0.2rem;
+    background-color: #0076de;
+    color: #fff;
 }
 
-.filter-select:hover{
-    background: var(--grayColor);
-}
 
-.filter-choosen{
+
+.filter-choosen {
     width: 100%;
     padding: 0.3rem 0;
     display: flex;
@@ -174,7 +195,7 @@ header {
     gap: 0.5rem;
 }
 
-.choosen-card{
+.choosen-card {
     background: var(--primaryColor);
     padding: 0.2rem 0.5rem;
     border-radius: 20px;
@@ -182,34 +203,257 @@ header {
     cursor: pointer;
 }
 
-.job-list{
+.job-list {
     margin: 5%;
     padding: 1rem;
     background-color: var(--grayColor);
 }
 
-.job-card{
+.job-card {
     display: flex;
     justify-content: space-between;
     padding: 1rem;
     margin: 1rem;
     min-height: 100px;
     align-items: center;
-    box-shadow: rgba(0, 0, 0,0.16) 0px 1px 4px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     background-color: var(--whiteColor);
     cursor: pointer;
 }
 
-.job-card:hover{
-    box-shadow: rgba(0, 0, 0,0.1) 0px 1px 12px; 
+.job-card:hover {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 12px;
 }
 
-.job-name{
+.job-name {
     display: flex;
 }
 
-.job-profile{
+.job-profile {
     width: 60px;
     height: 60px;
     margin: 0.5rem;
 }
+
+.job-detail {
+    padding: 0 10px;
+}
+
+.job-detail > h4 {
+    color: var(--primaryColor);
+    font-size: .9rem;
+    font-weight: 400;
+}
+
+.job-detail > h3 {
+    font-weight: 700;
+}
+
+.job-detail > p {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.job-level {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.job-level > a {
+    padding: 0 1rem;
+    margin: 0.2rem;
+    color: var(--whiteColor);
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
+
+.label-a {
+    background-color: var(--yellowColor);
+}
+
+.label-b {
+    background-color: var(--primaryColor);
+}
+
+.label-c {
+    background-color: var(--blackcolor);
+}
+
+.job-posted {
+    font-size: .8rem;
+}
+
+.job-more {
+    display: block;
+    padding: 0.3rem 2rem;
+    margin: 20px auto;
+    width: 250px;
+    background: transparent;
+    color: var(--primaryColor);
+    border: 1px solid var(--primaryColor);
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.job-more:hover {
+    background-color: var(--primaryColor);
+    color: var(--whiteColor);
+}
+
+
+.job-location{
+    display: flex;
+    gap: .4rem;
+    align-items: center;
+}
+
+.salary-range p span{
+    font-weight: 700;
+    color: #000;
+    font-size: .8rem;
+
+    
+}
+
+.salary-range p{
+    font-size: .8rem;
+    color: #918787;
+    font-weight: 400;
+}
+
+.job-location p{
+    font-size: .8rem;
+    color: #918787;
+    font-weight: 500;
+}
+
+
+/* Media Queries for Responsive Design */
+
+/* Tablets (768px and above) */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .navbar-logo > a {
+        font-size: 1.5rem;
+    }
+
+    .nav-menu {
+        width: 300px;
+    }
+
+    .header-title {
+        font-size: 3rem;
+        top: 5rem;
+        left: 2rem;
+    }
+
+    .search-wrapper {
+        width: 80%;
+    }
+
+    .header-title{
+        margin-top: 4rem;
+    }
+
+    .header-title h2{
+    
+        font-size: 5rem;
+    }
+
+    .job-card{
+        padding-top: 1rem;
+        padding-left: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
+/* Mobile devices (480px and below) */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0.5rem 1.5rem;
+    }
+
+    .navbar-logo > a {
+        font-size: 1.2rem;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .header-title {
+        font-size: 2rem;
+        top: 4rem;
+        left: 1rem;
+       
+    }
+
+    .search-wrapper {
+        width: 90%;
+    }
+
+    .job-card {
+        flex-direction: column;
+        align-items: flex-start;
+        
+    }
+
+    .job-profile {
+        width: 40px;
+        height: 40px;
+    }
+
+    .job-detail > h3 {
+        font-size: 1.2rem;
+    }
+
+    .job-level {
+        flex-direction: row;
+    }
+
+    
+
+  
+
+    .job-more {
+        width: 200px;
+    }
+
+    .job-card{
+        position: relative;
+    }
+
+    .job-location{
+        position: absolute;
+        bottom: .1rem;
+        left: 10px;
+       
+    }
+
+    
+
+    .job-level{
+        margin-bottom: 1rem;
+    }
+
+    .salary-range{
+        position: absolute;
+        bottom: .2rem;
+        right: 10px;
+        margin-top: 1rem;
+    }
+
+}
+
+
+
