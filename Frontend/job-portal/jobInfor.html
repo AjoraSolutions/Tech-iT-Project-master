@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Detail Page</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(117,147,223,1) 0%, rgb(70, 104, 189) 17%);
+      }
+
+      .job-header {
+        background-color: white;
+        padding: 40px;
+        padding-top: 1rem;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .job-header h1 {
+        font-size: 2.2rem;
+        font-weight: bold;
+        color: #0056b3;
+        
+      }
+
+      .job-header p {
+        margin-bottom: 0;
+        opacity: 0.9;
+        font-size: 1.1rem;
+      }
+
+      .job-details-subHead{
+        color: #032b5f;
+      }
+
+      .job-section {
+        background-color: white;
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      
+
+      .key-skills span {
+        margin-right: 10px;
+        padding: 8px 12px;
+        background-color: #e9f7fe;
+        border-radius: 5px;
+        font-weight: 400;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .key-skills span:hover {
+        background-color: #0072ff;
+        color: white;
+      }
+
+      .apply-btn {
+        background: rgb(2, 0, 36);
+        background: linear-gradient(
+          90deg,
+          rgba(2, 0, 36, 1) 0%,
+          rgba(0, 95, 255, 1) 53%
+        );
+        color: rgb(224, 226, 228);
+        font-size: 1.2rem;
+        padding: 12px 30px;
+        border-radius: 50px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .apply-btn:hover {
+        background-color: rgb(11, 68, 133);
+        transform: scale(1.05);
+        color: #fff;
+      }
+
+      .floating-apply {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: #0072ff;
+        color: white;
+        padding: 15px 25px;
+        font-size: 1.2rem;
+        border-radius: 50px;
+        transition: all 0.3s ease-in-out;
+        z-index: 1000;
+      }
+
+      .floating-apply:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+      }
+
+      .qualification-section {
+        background-color: white;
+        border-radius: 10px;
+         padding-top: 8px; 
+        padding-left: 10px;
+        margin-bottom: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .qualification-section h3 {
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+        color: #0072ff;
+      }
+
+      .qualification-section .key-skills span {
+        background: none;
+        color: black;
+      }
+
+      .header-details{
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+            align-items: center;
+        }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        .job-header h1 {
+          font-size: 1.8rem;
+        }
+
+        .job-header p {
+          font-size: 1rem;
+        }
+
+        .job-section h3 {
+          font-size: 1.5rem;
+        }
+
+        .apply-btn {
+          font-size: 1rem;
+          padding: 10px 20px;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .job-header {
+          padding: 10px;
+          margin-bottom: 1rem;
+        }
+
+        .header-details{
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .job-header h1 {
+          font-size: 1.5rem;
+        }
+
+        .job-header p {
+          font-size: 0.9rem;
+        }
+
+        .job-section {
+          padding: 15px;
+        }
+
+        .job-section h3 {
+          font-size: 1.3rem;
+        }
+
+        .key-skills span {
+          padding: 3px 6px;
+          margin-right: 5px;
+          
+        }
+
+       
+
+        .apply-btn {
+          font-size: 0.9rem;
+          padding: 6px 0;
+          font-weight: 600;
+          width: 200px;
+        }
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <div class="container p-5">
+      <!-- Job Header -->
+      <div class="job-header p-3 mb-2">
+        <h1 class="pb-2 pl-2">SQL Server Developer</h1>
+        <p class="lead header-details pl-2">
+          <span><i class="fa-solid fa-location-dot"></i> Remote - Noida</span>
+        
+         <span> <i class="fa-solid fa-briefcase"></i> 14 to 24 Yrs</span>
+           <span><i class="fa-solid fa-wallet"></i> 
+            39 - 45 Lakh/Yr</span>
+
+            <span class="font-weight-bold">Full Time</span>
+
+            
+        </p>
+      </div>
+
+      <!-- Job Details Section -->
+      <div class="job-section p-4">
+        <h5 class=" job-details-subHead"><i class="fas fa-info-circle section-icon"></i> Job Details</h5>
+        <p class="p-3">
+          As SQL Developers work closely with application developers, data analysts, and other stakeholders to understand data requirements and assist in integrating new data sources. They maintain thorough documentation of database designs, processes, and SQL queries, and are involved in testing changes to ensure they meet specifications while identifying and resolving bugs. Security management is also a critical responsibility, where they implement measures like user access controls and monitor for unauthorized access.
+        </p>
+      </div>
+
+      <!-- Qualification Section -->
+      <div class="qualification-section p-4">
+        <h5 class="fs-2 job-details-subHead">
+          <i class="fa-solid fa-graduation-cap"></i> Qualification
+        </h5>
+        <div class="key-skills p-2">
+          <span>B.Tech</span>
+          <span>BCA</span>
+          <span>BE</span>
+          <span>MCA</span>
+        </div>
+      </div>
+
+      <!-- Other Details -->
+      <div class="job-section p-4">
+        <h5 class="pb-2 job-details-subHead"><i class="fas fa-briefcase section-icon"></i> Other Details</h5>
+        <p  class="pl-3">
+          <strong>Department:</strong> Application Programming / Maintenance
+        </p>
+        <p class="pl-3"><strong>Industry:</strong> IT Services & Consulting</p>
+        <p class="pl-3"><strong>Education:</strong> Graduation</p>
+        <p class="pl-3"><strong>Application Deadline:</strong> 30/10/24</p>
+      </div>
+
+      <!-- Key Skills -->
+      <div class="job-section p-4">
+        <h5 class=" job-details-subHead"><i class="fas fa-tools section-icon"></i> Key Skills</h5>
+        <div class="key-skills pl-3">
+          <span>Celery</span>
+          <span>Django</span>
+          <span>Python</span>
+          <span>SQL</span>
+        </div>
+      </div>
+
+      <!-- Company Details -->
+      <div class="job-section p-4">
+        <p class="job-details-subHead"><strong>Company Name:</strong> HT Media Limited</p>
+      </div>
+
+      <!-- Apply Button -->
+      <div class="text-center mt-4">
+        <a href="#" class="btn apply-btn px-5">Apply Now</a>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
